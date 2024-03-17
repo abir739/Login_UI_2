@@ -42,7 +42,7 @@ header {
 }
 
 .navigate a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .navigate .btnLogin1 {
@@ -66,14 +66,68 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 480px;
-    width: 420px;
+    height: 550px;
+    width: 450px;
     border: 2px solid rgba(255, 255, 255, 0.5); 
     border-radius: 25px;
     background: transparent;
     backdrop-filter: blur(18px);
+    overflow: hidden;
+    transition: transform .8s ease, height .2s ease;
+    transform: scale(0);
 }
 
+.Box.active-popup {
+    transform: scale(1);
+}
+.Box.active {
+    height: 600px;
+}
+
+.Box .box-form-login{
+    /* display: none; */
+    transition: transform .22s ease;
+    transform: translateX(0);
+}
+
+.Box.Box.active .box-form-login{
+    transition: none;
+    transform: translateX(-450px);
+}
+
+
+.Box .box-form-register{
+    position: absolute;
+    transition: none;
+    transform: translateX(450px);
+
+}
+.Box.active .box-form-register {
+    transition: transform .22s ease;
+    transform: translateX(0px);
+}
+.box-form-register .agree{
+    padding: 20px;
+}
+.box-form-register .agree label{
+    color: #fff;
+    font-size: 14px;
+   
+}
+.Box .colse-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+
+}
 .Box h1 {
     margin: 40px;
     font-size: 30px;
@@ -87,44 +141,84 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    width: 100%;
-    height: 30px;
+    width: 90%;
+    height: 45px;
     border-bottom: 2px solid #fff;
-    margin: 20px;
+    margin: 20px 10px 10px 20px;
 }
 
 .box-input input {
-    position: absolute;
-    width: calc(100% - 25px); /* Adjusted input width */
+    width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
-    padding-left: 25px; /* Moved padding from placeholder to here */
+    padding: 8px 0px 30px 20px;
+}
+.box-input input::placeholder{
+    font-size: 15px;
+    color: #fff;
 }
 
+.Box .box-input i{
+    font-size: 18px;
+    color: #fff;
+}
 .Remember {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+    padding: 11px;
 }
-
-.Remember label,
+.Remember label{
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Remember label input{
+    margin: 8px;
+    accent-color: #fff;
+}
 .Remember a {
     color: #fff;
     font-size: 14px;
+    margin: 15px 10px 13px 95px;
+    text-decoration: none;
+}
+
+.Remember a:hover{
+    text-decoration: underline;
 }
 
 .Register {
-    text-align: center;
-    margin-top: 20px;
+    text-align: start;
+    margin-top: 22px;
 }
 
-.Register label,
+.Register label{
+    margin-right: 63px;
+    color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .Register a {
     color: #fff;
     font-size: 14px;
+    text-decoration: none;
+}
+.Register a:hover{
+    text-decoration: underline;
+}
+.Box .btnLogin2{
+    margin-top: 25px;
+}
+.btnLogin2 button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

@@ -19,8 +19,11 @@
     </nav>
 </header>
 <div class="Box">
-    <form action="" class="box-form">
-        <h1>Login</h1>
+    <span class="colse-icon"><i class='bx bx-x-circle'></i></span>
+
+<div action="" class="box-form-login">
+    <h1>Login</h1>
+    <form action="">
         <div class="box-input">
             <i class="bx bxs-envelope"></i><input type="email" placeholder="Email" required>
         </div>
@@ -40,9 +43,42 @@
 
         <div class="Register">
             <label>Don't have an account?</label>
-            <a href="#">Register</a>
+            <a href="#" class="login-btn">Register now</a>
         </div>
     </form>
+</div>
+
+<div action="" class="box-form-register">
+    <h1>Register</h1>
+    <form action="">
+
+        <div class="box-input">
+            <i class='bx bxs-user'></i><input type="text" placeholder="User name" required>
+        </div>
+
+        <div class="box-input">
+            <i class="bx bxs-envelope"></i><input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="box-input">
+            <i class="bx bxs-lock"></i><input type="password" placeholder="Password" required>
+        </div>
+
+        <div class="box-input">
+            <i class="bx bxs-lock"></i><input type="password" placeholder="Repeat your password" required>
+        </div> 
+        <div class="agree"><label><input type="checkbox"> I agree to the terms & conditions</label></div> 
+        <div class="btnLogin2">
+            <button>Sign Up</button>
+        </div>
+
+        <div class="Register">
+            <label>Do you have an account?</label>
+            <a href="#" class="register-btn">Login</a>
+        </div>
+    </form>
+</div>
+
 </div>
      
 <script src="script.js"></script>
